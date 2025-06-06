@@ -8,18 +8,32 @@ body {
     font-weight: 400;
     line-height: 1.43;
 }
+
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
+
 .logo {
     max-width: 100%;
     max-height: 100%;
     border: white 1px solid;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.upper {
+    font-size: 0.75em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /*Header*/
-header, footer, #tagScore {
+header, footer, #tagScore, .score {
     background-color: #1d1d1d;
     color: white;
 }
@@ -32,6 +46,7 @@ header {
     left: auto;
     right: 0;
     position: sticky;
+    z-index: 1000;
 }
 
 #headerMenu {
@@ -45,7 +60,7 @@ header {
     list-style-type: none;
 }
 
-#headerLogo{
+#headerLogo {
     max-height: 100px;
 }
 
@@ -55,8 +70,18 @@ header {
     justify-content: center;
 }
 
-#headerLinks * {
+#headerLinks > * {
     height: 100%;
+    padding: 5px;
+}
+
+.headerLink{
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 /*Footer*/
@@ -91,6 +116,11 @@ header {
 main {
     padding-top: 20px;
     padding-bottom: 20px;
+    background: #f8f8f8;
+}
+
+main > .row {
+    margin-bottom: 24px;
 }
 
 .scoreContainer {
@@ -99,7 +129,7 @@ main {
     justify-content: space-between;
 }
 
-#tagScore {
+#tagScore, .score {
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -123,4 +153,68 @@ main {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+}
+
+#overviewRow {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#statsRow {
+    justify-content: space-around;
+}
+
+.statContainer {
+    padding-top: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.statContainer > * {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.asOfToday {
+    font-size: 8px;
+}
+
+.gradeText {
+    font-weight: bold;
+    min-height: 90px;
+}
+
+#certificate {
+    height: 0;
+    margin: 2em 0;
+    border-radius: 10px;
+    border: #a8a8aa 1px solid;
+    position: relative;
+}
+
+#certText{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 150px;
+    background: #a8a8aa;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cardImage{
+    width: 100%;
+}
+
+#cardCloseUps *{
+    margin-bottom: 20px;
+}
+
+#frontImage, #backImage{
+    width: 100%;
 }
